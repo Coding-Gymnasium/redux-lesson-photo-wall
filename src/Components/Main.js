@@ -23,14 +23,12 @@ const posts = [
   },
 ];
 
-class Main extends Component {
-  render() {
-    return (
-      <div>
-        <Title title={"Photowall"} />
-        <Photowall posts={posts} />
-      </div>
-    );
-  }
+function Main() {
+  return (
+    <div>
+      <Title title={"Photowall"} />
+      <Photowall posts={posts} />
+    </div>
+  );
 }
 export default Main;
