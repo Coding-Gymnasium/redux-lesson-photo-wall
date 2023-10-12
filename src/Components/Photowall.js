@@ -1,17 +1,18 @@
 import PropTypes from "prop-types";
 import React from "react";
 import Photo from "./Photo.js";
+import { Link } from "react-router-dom";
 
 function PhotoWall(props) {
   return (
     <>
-      <a onClick={props.onNavigate} href="#AddPhoto">
+      <Link to="/add-photo">
         <div className="addIcon">
           <div className="cross-vertical">
             <div className="cross-horizontal"></div>
           </div>
         </div>
-      </a>
+      </Link>
 
       <div className="photoGrid">
         {props.posts.map((post, index) => {

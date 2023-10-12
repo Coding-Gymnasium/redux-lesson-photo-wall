@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-
 import AddPhoto from "./AddPhoto.js";
 import Photowall from "./Photowall.js";
 import Title from "./Title";
@@ -32,7 +31,6 @@ class Main extends Component {
       screen: "photos", // photos, addPhoto
     };
     this.removePhoto = this.removePhoto.bind(this);
-    this.navigate = this.navigate.bind(this);
   }
 
   removePhoto(postRemoved) {
@@ -41,29 +39,12 @@ class Main extends Component {
     }));
   }
 
-  navigate() {
-    this.setState({ screen: "addPhoto" });
-  }
-
   render() {
     return (
-      <>
-        {this.state.screen === "photos" && (
-          <div>
-            <Title title={"Photowall"} />
-            <Photowall
-              posts={this.state.posts}
-              onRemovePhoto={this.removePhoto}
-              onNavigate={this.navigate}
-            />
-          </div>
-        )}
-        {this.state.screen === "addPhoto" && (
-          <div>
-            <AddPhoto />
-          </div>
-        )}
-      </>
+      <div>
+        <Title title={"Photowall"} />
+        <Photowall posts={this.state.posts} onRemovePhoto={this.removePhoto} />
+      </div>
     );
   }
 }
