@@ -1,6 +1,5 @@
 import posts from "../data/posts.js";
-
-const postReducer = function posts(state = posts, action) {
+function postReducer(state = posts, action) {
   return state;
 };
 
