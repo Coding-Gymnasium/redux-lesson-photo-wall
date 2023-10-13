@@ -15,7 +15,7 @@ function PhotoWall(props) {
 
       <div className="photoGrid">
         {props.posts.map((post, index) => {
-          return <Photo key={index} post={post} {...props} />;
+          return <Photo key={index} post={post} {...props} index={index} />;
         })}
       </div>
     </>
